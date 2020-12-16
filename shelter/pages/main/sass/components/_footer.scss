@@ -1,0 +1,119 @@
+.footer {
+    color: $color-primary;
+    background: $footer-gradient-background;
+    padding-top: 40px;
+    
+    a {
+        @extend %font-add;
+        @include font( $size: 2.0rem, $height: 2.3rem );
+        color: $color-primary;
+        text-decoration: none;
+        margin: 0;
+        letter-spacing: 0.06em;
+        display:inline-block;
+        position: relative;
+    }
+
+    @include media-tablet {
+        padding-top: 30px;
+    }
+
+    &> div {
+        @include media-tablet {
+            flex-direction: column;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        @include media-mobile {
+            max-width: 300px;
+        }
+
+    }
+    
+ }
+ 
+ .footer__title {
+     color: $color-light-xl;
+
+     .footer-address & {
+        @include media-mobile {
+            max-width: 270px;
+            margin: 0 auto;
+        }
+     }
+ }
+ 
+ .footer__image-wrapper {
+     margin-left: 160px;
+     max-height: 310px;
+     @include media-tablet {
+        margin-left: 0px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    @include media-mobile {
+        margin-top: 46px;
+        height: 269px;
+    }
+ }
+
+ .footer-contacts {
+    @include media-mobile {
+        text-align: center;
+    }
+ }
+ 
+ a.footer__email {
+     @include footer-icon($name:mail);
+     @include media-mobile {
+        margin: 42px 0px 38px;
+    }
+ }
+ 
+ .footer__tel {
+     @include footer-icon($name:phone)
+ }
+ 
+ .footer__address-main,
+ .footer__address-add {
+     @include footer-icon($name:pin);
+     padding-left: 44px;
+      &::before {
+          position: absolute;
+          left:0;
+     }
+ }
+ 
+ a.footer__address-main {
+    padding-bottom: 6px;
+      &::before {
+          top: 6px;
+     }
+     @include media-mobile {
+        margin:40px 0px 38px;
+    }
+ }
+ 
+ .footer__address-add {
+      &::before {
+          top: -6px;
+     }
+ }
+ 
+ .footer-address {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 230px !important;
+     @include media-mobile {
+        margin-top: 35px;
+    }
+ }
+
+ .footer__image {
+    @include media-mobile {
+        width: 260px;
+    }
+ }

@@ -1,0 +1,83 @@
+.help {
+    padding: 81px 0 44px;
+    @include media-mobile {
+        padding: 42px 0 17px;
+    }
+}
+
+.help__title {
+    max-width: 310px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.help-items {
+    padding-top: 60px;
+    max-width: 1180px;
+    margin: 0 auto;
+    @include media-tablet {
+        max-width: 630px;
+    }
+    @include media-mobile {
+        max-width: 290px;
+        padding-top: 0px;
+    }
+
+}
+
+.help__item {
+    margin: 0 60px 58px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-tablet {
+        flex-basis: 170px;
+        margin: 0 0 55px;
+    }
+    @include media-mobile {
+        flex-basis: 130px;
+        margin: 0 0 26px;
+    }
+}
+
+.help__item-food {
+    @include icon($name: food);
+}
+
+.help__item-transport {
+    @include icon($name:transportation);
+}
+
+.help__item-toys {
+    @include icon($name:toys);
+}
+
+.help__item-bowls {
+    @include icon($name:bowls);
+}
+
+.help__item-shampoos {
+    @include icon($name:shampoos);
+}
+
+.help__item-vitamins{
+    @include icon($name:vitamins, $bottom: 20px);
+}
+
+.help__item-medicines{
+    @include icon($name:medicines, $bottom: 20px);
+    @include media-tablet {
+        @include icon($name:medicines);
+    }
+}
+
+.help__item-collars{
+    @include icon($name:collars, $bottom: 20px);
+}
+
+.help__item-sleep{
+    @include icon($name:sleeping-area, $bottom: 20px);
+}
+
